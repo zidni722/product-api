@@ -80,7 +80,7 @@ func (p *ProductController) Create(c *gin.Context) {
 		c.AbortWithStatus(400)
 	}
 
-	response := dto.BaseResponseDTO("Get Product List Success.", http.StatusOK, "success", ToProductDto(createdProduct))
+	response := dto.BaseResponseDTO("Create Product Success.", http.StatusOK, "success", ToProductDto(createdProduct))
 
 	c.JSON(http.StatusOK, response)
 }
